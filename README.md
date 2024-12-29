@@ -22,7 +22,7 @@ The project follows a clean, layered architecture:
 
 ```
 sticky-notes/
-├── cmd/                    # Application entry points
+├── cmd/app/                    # Application entry points
 ├── internal/              # Internal packages
 │   ├── model/            # Data models
 │   ├── repository/       # Data storage layer
@@ -72,39 +72,8 @@ go build -o sticky-notes ./cmd/main.go
 - Each note is stored as a separate JSON file
 - Thread-safe operations for concurrent access
 
-### Color Options
-The application supports five different colors for notes:
-- Yellow (default)
-- Blue
-- Green
-- Pink
-- Orange
-
-## Project Components
-
-### Model Layer
-- Defines the structure of notes
-- Implements color validation
-- Handles timestamps
-
-### Repository Layer
-- Manages data persistence
-- Implements CRUD operations
-- Provides search functionality
-
-### Service Layer
-- Implements business logic
-- Validates operations
-- Generates unique IDs for notes
 
 ## todo 
-- add a user interface
-- add a desktop interface
+-  make basic ui for sticky note 
 
 ## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Author
-
-- GitHub: [@bllexe](https://github.com/bllexe) 
