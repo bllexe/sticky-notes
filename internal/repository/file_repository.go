@@ -16,6 +16,11 @@ type FileRepository struct {
 	mutex   sync.RWMutex
 }
 
+// GetById implements NoteRepository.
+func (r *FileRepository) GetById(id string) (*model.Note, error) {
+	panic("unimplemented")
+}
+
 func NewFileRepository(dataDir string) (*FileRepository, error) {
 	if err := os.MkdirAll(dataDir, 0755); err != nil {
 		return nil, fmt.Errorf("failed to create data directory: %w", err)
